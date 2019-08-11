@@ -1,0 +1,89 @@
+<div class="frontcontainer">
+    <div class="gifDiv">
+        
+        <img id="gif" src="./assets/images/keanu.png">
+        <p class="status">Keanu</p>
+        <p class="status">Status: Active</p>
+    </div>
+    <div class="title">
+        <h1>City Quest Board</h1>
+        <p>Grab a quest now!</p>
+        <br>
+        <h2>Select a contract</h2>
+        <panel>
+            <form class="create-form">
+                <div class="form-group">
+                <label for="newburger">Insert own quest here:</label>
+        
+                <input placeholder="Custom quest here" type="text" id="newburger" name="burger">
+                <button type="submit" class="btn btn-success" id="addburger">
+                        <span class="fa fa-black-tie"></span>
+                    </button>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="newburger">Available town quests:</label>
+                    <select data-placeholder="" id="newburger" name="burger">
+                        <option value="Nothing Selected" selected>Please select a quest</option>
+                        <option value="Fix magic">Magic disturbance</option>
+                        <option value="Capture bandits">Round up bandits</option>
+                        <option value="Princess tiara">Find princess' tiara</option>
+                        <option value="Medium Smalls">Capture notorious Medium Smalls</option>
+                    </select>
+
+                    <button type="submit" class="btn btn-success" id="addburger">
+                        <span class="fa fa-thumbs-up"></span>
+                    </button>
+                </div>
+            </form>
+        </panel>
+    </div>
+
+    <div class="quests">
+        <div class="panel panel-default">
+            <div class="panel-heading" id="leftside">
+                <p class="paneltxt">Send signed contract to Mayor when completed</p>
+            </div>
+            <div class="panel-body">
+
+                <ul class="list">
+                {{#each burgers}}
+                    {{#unless devoured}}
+
+                    <span><span> {{this.id}} - {{this.burger_name}}</span></span>
+                    <button type="button" class="eatburger btn btn-warning" id="eatbutton" data-id="{{this.id}}"
+                        data-newDevoured="{{devour}}"><span class="fa fa-usd"></span></button>
+                    <hr>
+                    {{/unless}}
+                    {{/each}}
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    <div class="rewards">
+        <div class="panel panel-default">
+            <div class="panel-heading" id="rightside">
+                <p class="paneltxt">Collect reward here</p>
+            </div>
+            <div class="panel-body">
+                <ul class="list">
+                    {{#each burgers}}
+                    {{#if devoured}}
+                    <span><span> {{this.id}} - {{this.burger_name}}</span></span>
+                    <button type="button" class="trashburger btn btn-danger" id="trashbutton" data-id="{{this.id}}"
+                        data-newDevoured="{{devour}}"><span class="fa fa-trash"></span></button>
+                    <hr>
+                    {{/if}}
+                    {{/each}}
+                </ul>
+
+
+
+            </div>
+        </div>
+    </div>
+
+  
+
+</div>

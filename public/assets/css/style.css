@@ -1,0 +1,82 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.frontcontainer {
+    background: rgb(100, 100, 100);
+    /* background-image: url(../images/city.jpg); */
+    /* background-size: 100% 100%; */
+    min-width: 100%;
+    min-height: 100vh; 
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      "d d d e e e"
+      "d d d e e e"
+      "a a a b b b"
+      "a a a c c c";
+      font-family: 'Blinker', sans-serif;
+      color: whitesmoke;
+}
+.imgDiv{
+    justify-self: center;
+    border: solid 2px whitesmoke;
+    width: 80%;
+    grid-area: e;
+    background-image: url(../images/futurebalcony.gif);
+    background-size: 100% 100%;
+}
+.gifDiv{
+    padding-top: 50px;
+    color: rgb(255, 255, 255);
+    background: rgba(0, 0, 0, 0.568);
+    grid-area: a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#gif{
+    width: 50%;
+    height: 50%;;
+    padding: 20px;
+    border: solid whitesmoke 1px;
+}
+.status{
+    color: rgb(11, 134, 143);
+}
+.title{
+    color: rgb(255, 255, 255);
+    background: rgba(0, 0, 0, 0.568);
+    grid-area: d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}   
+.quests{
+    grid-area: b;
+    /* background: rgba(255, 255, 255, 0.473); */
+    margin: 30px;
+}
+.rewards{
+    grid-area: c;
+    /* background: rgba(255, 255, 255, 0.473); */
+    margin: 30px;
+}
+#newburger{
+    border-radius: 5px;
+    background: none;
+    color: gray;
+}
+.paneltxt{
+    text-align: center;
+    border: solid 1px whitesmoke;
+}
+.list{
+    padding: 20px;
+    background: rgba(5, 5, 65, 0.555);
+    border: solid 1px whitesmoke;
+}
