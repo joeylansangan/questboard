@@ -6,7 +6,6 @@ var exphbs = require("express-handlebars");
 // app variable to run express
 var app = express();
 var PORT = process.env.PORT || 3000;
-var mysqlConnection = process.env.JAWSDB;
 
 // static route
 app.use(express.static("public"));
